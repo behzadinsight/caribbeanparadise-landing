@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Caribbean Paradise — Dominica Citizenship for Afghan Families</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A Dominica passport through the official Citizenship by Investment Programme — a legal route to global mobility for Afghan families. Investment from USD 200,000." />
+  <link rel="stylesheet" href="assets/colors_and_type.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+  <style>
+    /* ──────────────────────────────────────────
+       MOBILE LANDING — Caribbean Paradise
+       Designed for ~390–430px wide viewport.
+       On wider screens it sits centered on a
+       quiet cream stage so reviewers see it
+       like a phone preview.
+       ────────────────────────────────────────── */
+
+    :root {
+      --m-pad: 24px;
+      --m-radius: 14px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #ece6db; color: var(--fg-1); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { background: none; border: none; cursor: pointer; padding: 0; }
+
+    /* Phone stage — centers the design on desktop, full-width on mobile */
+    .stage {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      background:
+        radial-gradient(1100px 600px at 50% -10%, rgba(67,7,6,.06), transparent 60%),
+        #ece6db;
+    }
+
+    @media (min-width: 520px) {
+      .stage { padding: 32px 24px 64px; }
+    }
+
+    .device {
+      width: 100%;
+      max-width: 430px;
+      background: var(--bg-canvas);
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 92px; /* room for sticky CTA */
+    }
+
+    @media (min-width: 520px) {
+      .device {
+        border-radius: 38px;
+        box-shadow:
+          0 1px 0 rgba(255,255,255,.7) inset,
+          0 30px 70px rgba(67,7,6,.18),
+          0 8px 20px rgba(67,7,6,.10);
+      }
+    }
+
+    /* ── Top nav ───────────────────────────── */
+    .nav {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+      padding: 18px var(--m-pad) 0;
+      display: flex; align-items: center; justify-content: space-between;
+      color: var(--cp-cream-100);
+    }
+    .nav__brand { display: flex; align-items: center; gap: 9px; }
+    .nav__brand img { height: 28px; filter: brightness(0) invert(1); }
+    .nav__brand-name {
+      font-family: var(--font-display); font-size: 16px;
+      line-height: 1; letter-spacing: -.005em;
+      color: var(--cp-cream-100);
+    }
+    .nav__menu {
+      width: 40px; height: 40px; display: grid; place-items: center;
+      background: rgba(255,253,244,.16); border-radius: 10px;
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,253,244,.28);
+      color: var(--cp-cream-100);
+    }
+    .nav__menu iconify-icon { font-size: 20px; }
+
+    /* ── Hero ─────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 720px;
+      color: var(--cp-cream-100);
+      overflow: hidden;
+      display: flex; flex-direction: column; justify-content: flex-end;
+    }
+    .hero__bg { position: absolute; inset: 0; }
+    .hero__bg img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: 35% center;
+    }
+    .hero__veil {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg,
+          rgba(255,255,255,.05) 0%,
+          rgba(67,7,6,0) 35%,
+          rgba(67,7,6,.55) 75%,
+          rgba(67,7,6,.92) 100%);
+    }
+
+    .hero__eyebrow-strip {
+      position: absolute; top: 78px; left: var(--m-pad); right: var(--m-pad);
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-body); font-weight: 700; font-size: 11px;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,253,244,.92);
+    }
+    .hero__eyebrow-strip::after {
+      content: ""; flex: 1; height: 1px;
+      background: linear-gradient(90deg, rgba(255,253,244,.5), rgba(255,253,244,0));
+    }
+
+    .hero__content {
+      position: relative; z-index: 2;
+      padding: 24px var(--m-pad) 28px;
+    }
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: 34px; line-height: 1.08; letter-spacing: -.012em;
+      font-weight: 600; color: var(--cp-cream-100);
+      margin: 0 0 18px; text-wrap: balance;
+    }
+    .hero__title em { font-style: italic; color: #f6c9c8; }
+    .hero__lede {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 14.5px; line-height: 1.65;
+      color: rgba(255,253,244,.88); margin: 0 0 22px;
+    }
+
+    /* Hero badge — glass over photo */
+    .hero__badge {
+      margin: 0 0 22px; padding: 16px 18px; border-radius: 16px;
+      background: var(--grad-maroon-glass);
+      backdrop-filter: var(--blur-glass); -webkit-backdrop-filter: var(--blur-glass);
+      color: var(--cp-cream-100);
+      border: 1px solid rgba(255,253,244,.16);
+    }
+    .hero__badge-eyebrow {
+      font-family: var(--font-body); font-weight: 700; font-size: 10.5px;
+      letter-spacing: .18em; text-transform: uppercase; opacity: .8; margin: 0 0 6px;
+    }
+    .hero__badge-title {
+      font-family: var(--font-display); font-size: 19px;
+      line-height: 1.25; letter-spacing: -.006em;
+      margin: 0 0 6px; color: var(--cp-cream-100);
+    }
+    .hero__badge-title strong { font-weight: 700; }
+    .hero__badge-fine {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 12px; line-height: 1.5; opacity: .8; margin: 0;
+    }
+
+    /* Primary CTA button */
+    .btn-whatsapp {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; background: #1FAA59; color: #fff;
+      font-family: var(--font-body); font-weight: 700; font-size: 15px;
+      padding: 15px 18px; border-radius: 12px; letter-spacing: .002em;
+      box-shadow: 0 8px 22px rgba(31,170,89,.32);
+      transition: opacity 160ms ease;
+    }
+    .btn-whatsapp:hover { opacity: .9; }
+    .btn-whatsapp iconify-icon { font-size: 20px; }
+
+    /* ── Section primitives ────────────────── */
+    .section { padding: 56px var(--m-pad); }
+    .section--tint { background: var(--bg-tint); }
+    .section--cream { background: var(--cp-cream-200); }
+    .section--maroon { background: var(--grad-maroon); color: var(--fg-on-brand); }
+
+    .eyebrow {
+      font-family: var(--font-body); font-weight: 700;
+      font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cp-maroon-700); margin: 0 0 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .eyebrow::before {
+      content: ""; width: 18px; height: 1px; background: var(--cp-rose-200);
+    }
+    .section--maroon .eyebrow { color: rgba(255,253,244,.85); }
+    .section--maroon .eyebrow::before { background: rgba(255,253,244,.4); }
+
+    .h2 {
+      font-family: var(--font-display);
+      font-size: 28px; line-height: 1.15; letter-spacing: -.01em;
+      font-weight: 400; color: var(--cp-maroon-900);
+      margin: 0 0 14px; text-wrap: balance;
+    }
+    .section--maroon .h2 { color: var(--cp-cream-100); }
+
+    .lede {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 14.5px; line-height: 1.7; color: #3a2a29; margin: 0 0 28px;
+    }
+    .section--maroon .lede { color: rgba(255,253,244,.85); }
+
+    /* ── Horizontal scroller ───────────────── */
+    .hscroll {
+      display: flex; gap: 14px;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 4px var(--m-pad) 14px;
+      margin: 0 calc(-1 * var(--m-pad));
+      scrollbar-width: none;
+    }
+    .hscroll::-webkit-scrollbar { display: none; }
+    .hscroll > * { scroll-snap-align: start; flex: 0 0 auto; }
+
+    .hscroll-hint {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-body); font-weight: 500; font-size: 11.5px;
+      color: var(--cp-ink-600); margin: -8px 0 14px; letter-spacing: .04em;
+    }
+    .hscroll-hint iconify-icon { font-size: 14px; color: var(--cp-maroon-700); }
+    .section--maroon .hscroll-hint { color: rgba(255,253,244,.6); }
+    .section--maroon .hscroll-hint iconify-icon { color: rgba(255,253,244,.9); }
+
+    /* ── Key facts (stacked) ───────────────── */
+    .key-facts {
+      background: var(--bg-canvas); padding: 24px var(--m-pad);
+      border-bottom: 1px solid rgba(67,7,6,.08);
+    }
+    .key-facts__stack { display: flex; flex-direction: column; gap: 10px; }
+    .key-fact-card {
+      width: 100%; border: 1px solid rgba(67,7,6,.10); border-radius: 12px;
+      padding: 14px 16px; background: var(--bg-card);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .key-fact-card iconify-icon { font-size: 22px; color: var(--cp-maroon-700); flex-shrink: 0; }
+    .key-fact-card strong {
+      display: block; font-family: var(--font-body); font-weight: 700;
+      font-size: 14px; line-height: 1.35; color: var(--cp-maroon-900);
+    }
+
+    /* ── Trust stats (2×2 grid) ────────────── */
+    .trust-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--cp-rose-200);
+      border-left: 1px solid var(--cp-rose-200);
+      margin-top: 8px;
+    }
+    .trust-cell {
+      border-right: 1px solid var(--cp-rose-200);
+      border-bottom: 1px solid var(--cp-rose-200);
+      padding: 22px 16px;
+    }
+    .trust-cell__num {
+      font-family: var(--font-display);
+      font-size: 36px; line-height: 1; letter-spacing: -.012em;
+      color: var(--cp-maroon-900); margin: 0 0 6px;
+    }
+    .trust-cell__lab {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 12.5px; line-height: 1.4; color: var(--cp-ink-700);
+    }
+
+    .trust-extras { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
+    .trust-extra {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 16px; border-radius: var(--m-radius);
+      background: var(--bg-card); box-shadow: var(--shadow-card);
+    }
+    .trust-extra__icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--cp-maroon-900); color: var(--cp-cream-100);
+      display: grid; place-items: center; flex-shrink: 0;
+    }
+    .trust-extra__icon iconify-icon { font-size: 20px; }
+    .trust-extra h4 {
+      font-family: var(--font-body); font-size: 14.5px; font-weight: 700;
+      line-height: 1.35; color: var(--cp-maroon-900); margin: 0 0 6px;
+      letter-spacing: -.003em;
+    }
+    .trust-extra p {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 13px; line-height: 1.55; color: var(--cp-ink-700); margin: 0;
+    }
+
+    /* ── Payment cards (hscroll) ───────────── */
+    .payment-card {
+      width: 290px; background: var(--bg-card); border-radius: var(--m-radius);
+      padding: 22px 20px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column;
+      border: 1px solid rgba(67,7,6,.06);
+    }
+    .payment-card--feature {
+      background: var(--grad-maroon); color: var(--cp-cream-100); border-color: transparent;
+    }
+    .payment-card__chip {
+      display: inline-flex; align-self: flex-start;
+      font-family: var(--font-body); font-weight: 700; font-size: 10.5px;
+      letter-spacing: .14em; text-transform: uppercase;
+      padding: 6px 10px; border-radius: 999px;
+      background: var(--cp-cream-300); color: var(--cp-maroon-900); margin-bottom: 14px;
+    }
+    .payment-card--feature .payment-card__chip {
+      background: rgba(255,253,244,.16); color: var(--cp-cream-100);
+    }
+    .payment-card__title {
+      font-family: var(--font-display); font-size: 22px;
+      line-height: 1.2; letter-spacing: -.006em; font-weight: 400;
+      color: var(--cp-maroon-900); margin: 0 0 12px;
+    }
+    .payment-card--feature .payment-card__title { color: var(--cp-cream-100); }
+    .payment-card__title strong { font-weight: 700; }
+    .payment-card__desc {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 13.5px; line-height: 1.6; color: var(--cp-ink-700); margin: 0 0 10px;
+    }
+    .payment-card--feature .payment-card__desc { color: rgba(255,253,244,.85); }
+    .payment-card__fine {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 12px; font-style: italic; opacity: .8;
+    }
+
+    /* ── Licence cards (hscroll) ───────────── */
+    .license-card {
+      width: 260px; background: var(--bg-card);
+      border-radius: var(--m-radius); overflow: hidden;
+      box-shadow: var(--shadow-card); display: flex; flex-direction: column;
+    }
+    .license-card__img {
+      aspect-ratio: 4/5; background: #fafaf5;
+      display: grid; place-items: center; padding: 14px;
+      border-bottom: 1px solid rgba(67,7,6,.06);
+    }
+    .license-card__img img { width: 100%; height: 100%; object-fit: contain; }
+    .license-card__caption { padding: 14px 16px 18px; }
+    .license-card__caption strong {
+      display: block; font-family: var(--font-body); font-weight: 700;
+      font-size: 13.5px; color: var(--cp-maroon-900); margin-bottom: 4px;
+    }
+    .license-card__caption span {
+      display: block; font-family: var(--font-body); font-weight: 500;
+      font-size: 12px; line-height: 1.5; color: var(--cp-ink-600);
+    }
+
+    /* ── Team roles list ───────────────────── */
+    .team-roles {
+      margin-top: 20px; display: flex; flex-direction: column;
+      border-top: 1px solid var(--cp-rose-200);
+    }
+    .team-role {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 0; border-bottom: 1px solid var(--cp-rose-200);
+    }
+    .team-role__dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--cp-maroon-700); margin-top: 8px; flex-shrink: 0;
+    }
+    .team-role__name {
+      font-family: var(--font-body); font-weight: 700;
+      font-size: 14px; color: var(--cp-maroon-900); margin: 0 0 2px;
+    }
+    .team-role__title {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 12.5px; line-height: 1.5; color: var(--cp-ink-700); margin: 0;
+    }
+
+    /* ── Process stepper ───────────────────── */
+    .process { position: relative; margin-top: 8px; }
+    .process::before {
+      content: ""; position: absolute; left: 19px; top: 12px; bottom: 12px;
+      width: 1px; background: var(--cp-rose-200);
+    }
+    .process-step {
+      position: relative;
+      display: grid; grid-template-columns: 40px 1fr; gap: 16px; padding: 14px 0;
+    }
+    .process-node {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--cp-cream-100); border: 1px solid var(--cp-rose-200);
+      display: grid; place-items: center;
+      font-family: var(--font-display); font-size: 14px; color: var(--cp-maroon-900);
+      z-index: 1;
+    }
+    .process-step--active .process-node {
+      background: var(--cp-maroon-900); color: var(--cp-cream-100); border-color: var(--cp-maroon-900);
+    }
+    .process-step__label {
+      font-family: var(--font-body); font-weight: 700;
+      font-size: 14.5px; color: var(--cp-maroon-900); margin: 9px 0 2px;
+    }
+    .process-step__detail {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 12.5px; line-height: 1.5; color: var(--cp-ink-700); margin: 0;
+    }
+    .process-meta {
+      margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    }
+    .process-meta__item {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--bg-card); padding: 12px; border-radius: 10px;
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 11.5px; line-height: 1.35; color: var(--cp-ink-900);
+    }
+    .process-meta__item iconify-icon { font-size: 16px; color: var(--cp-maroon-700); flex-shrink: 0; }
+
+    /* ── Why Dominica + image ──────────────── */
+    .benefits-image {
+      margin: 0 0 24px; border-radius: var(--m-radius); overflow: hidden;
+      position: relative; box-shadow: var(--shadow-card);
+    }
+    .benefits-image img {
+      width: 100%; height: auto; aspect-ratio: 5/4; object-fit: cover; display: block;
+    }
+    .benefits-image__caption {
+      position: absolute; left: 14px; right: 14px; bottom: 14px;
+      padding: 12px 14px; border-radius: 10px;
+      background: rgba(67,7,6,.78);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      color: var(--cp-cream-100);
+    }
+    .benefits-image__caption strong {
+      display: block; font-family: var(--font-display); font-size: 15px;
+    }
+    .benefits-image__caption span {
+      display: block; font-family: var(--font-body); font-size: 11.5px;
+      opacity: .85; margin-top: 2px;
+    }
+    .benefits-list {
+      list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px;
+    }
+    .benefits-list li {
+      display: flex; gap: 12px; align-items: flex-start;
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 14px; line-height: 1.55; color: var(--cp-ink-900);
+    }
+    .benefits-list iconify-icon { font-size: 20px; color: var(--cp-maroon-700); flex-shrink: 0; margin-top: 1px; }
+
+    /* ── Consequence cards (hscroll) ───────── */
+    .consequence-card {
+      width: 240px; background: var(--bg-card);
+      border-radius: var(--m-radius); padding: 18px; box-shadow: var(--shadow-card);
+    }
+    .consequence-card__icon {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--cp-cream-300); color: var(--cp-maroon-900);
+      display: grid; place-items: center; margin-bottom: 12px;
+    }
+    .consequence-card__icon iconify-icon { font-size: 20px; }
+    .consequence-card__title {
+      font-family: var(--font-body); font-weight: 700;
+      font-size: 14px; line-height: 1.35; color: var(--cp-maroon-900); margin: 0 0 6px;
+    }
+    .consequence-card__desc {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 12.5px; line-height: 1.55; color: var(--cp-ink-700); margin: 0;
+    }
+
+    /* ── Office card-stack carousel ────────── */
+    .stack-stage {
+      position: relative; margin: 0 auto 36px;
+      width: 86%; max-width: 320px; aspect-ratio: 4/5;
+    }
+    .stack-card {
+      position: absolute; top: 0; left: 50%; width: 100%; height: 100%;
+      background: var(--bg-card); border-radius: 14px; padding: 8px;
+      box-shadow: 0 16px 36px rgba(67,7,6,.22), 0 4px 10px rgba(0,0,0,.10);
+      display: flex; flex-direction: column; cursor: pointer;
+      transition: transform 600ms cubic-bezier(.4,.0,.2,1), filter 400ms ease;
+      transform-origin: 50% 80%; will-change: transform;
+    }
+    .stack-card[data-pos="0"] { transform: translate(-50%, 0) rotate(-1.5deg); z-index: 3; filter: none; }
+    .stack-card[data-pos="1"] { transform: translate(calc(-50% + 22px), 16px) rotate(5deg) scale(.96); z-index: 2; filter: brightness(.95); }
+    .stack-card[data-pos="2"] { transform: translate(calc(-50% - 22px), 26px) rotate(-6deg) scale(.92); z-index: 1; filter: brightness(.9); }
+
+    .stack-card__media {
+      position: relative; border-radius: 9px; overflow: hidden;
+      flex: 1; min-height: 0; background: #2a1a18;
+    }
+    .stack-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .stack-card--video .stack-card__media::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%);
+      pointer-events: none;
+    }
+    .stack-card__play {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 46px; height: 46px; border-radius: 50%;
+      background: rgba(255,253,244,.95); color: var(--cp-maroon-900);
+      display: grid; place-items: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,.32); z-index: 2;
+    }
+    .stack-card__play iconify-icon { font-size: 24px; margin-left: 2px; }
+    .stack-card__duration {
+      position: absolute; left: 10px; bottom: 10px; z-index: 2;
+      padding: 3px 8px; border-radius: 999px;
+      background: rgba(0,0,0,.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      font-family: var(--font-body); font-weight: 700; font-size: 10.5px;
+      letter-spacing: .02em; color: #fff;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .stack-card__duration iconify-icon { font-size: 11px; }
+    .stack-card__caption { padding: 10px 6px 4px; }
+    .stack-card__eyebrow {
+      font-family: var(--font-body); font-weight: 700; font-size: 9.5px;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--cp-maroon-700); margin: 0 0 3px;
+    }
+    .stack-card__title {
+      font-family: var(--font-display); font-size: 15px;
+      line-height: 1.2; letter-spacing: -.006em; color: var(--cp-maroon-900); margin: 0 0 2px;
+    }
+    .stack-card__sub {
+      font-family: var(--font-body); font-weight: 500; font-size: 11px;
+      line-height: 1.35; color: var(--cp-ink-700); margin: 0;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .stack-card__sub iconify-icon { font-size: 11px; color: var(--cp-maroon-700); }
+
+    .stack-dots {
+      display: flex; justify-content: center; gap: 6px; margin: 0 0 24px;
+    }
+    .stack-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(67,7,6,.22);
+      transition: width 220ms ease, background 220ms ease;
+    }
+    .stack-dot.is-active { width: 18px; border-radius: 999px; background: var(--cp-maroon-900); }
+
+    /* ── Office list ───────────────────────── */
+    .office-list { display: flex; flex-direction: column; gap: 10px; }
+    .office-card {
+      background: var(--bg-card); border-radius: 12px; padding: 12px 14px;
+      box-shadow: var(--shadow-card); display: flex; align-items: flex-start; gap: 12px;
+    }
+    .office-pin {
+      width: 34px; height: 34px; border-radius: 10px;
+      background: var(--cp-maroon-900); color: var(--cp-cream-100);
+      display: grid; place-items: center; flex-shrink: 0;
+    }
+    .office-pin iconify-icon { font-size: 16px; }
+    .office-card__body { flex: 1; min-width: 0; }
+    .office-card__city {
+      font-family: var(--font-body); font-weight: 700;
+      font-size: 14px; color: var(--cp-maroon-900); margin: 0 0 2px; line-height: 1.3;
+    }
+    .office-card__addr {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 12px; line-height: 1.4; color: var(--cp-ink-700); margin: 0;
+    }
+    .office-card__phone {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
+      font-family: var(--font-body); font-weight: 700;
+      font-size: 12.5px; color: var(--cp-maroon-900); letter-spacing: .01em;
+    }
+    .office-card__phone iconify-icon { font-size: 13px; color: var(--cp-maroon-700); }
+
+    /* ── FAQ accordion ─────────────────────── */
+    .faq { display: flex; flex-direction: column; gap: 10px; }
+    .faq__row {
+      background: var(--bg-card); border-radius: 10px; padding: 16px 18px;
+      box-shadow: 0 1px 0 rgba(67,7,6,.04); cursor: pointer;
+    }
+    .faq__head { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .faq__q {
+      font-family: var(--font-body); font-weight: 700;
+      font-size: 14px; line-height: 1.4; color: var(--cp-maroon-900); margin: 0;
+    }
+    .faq__plus { font-size: 20px; color: var(--cp-maroon-700); flex-shrink: 0; transition: transform 200ms ease; }
+    .faq__a {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 13px; line-height: 1.65; color: var(--cp-ink-700);
+      margin: 0; max-height: 0; overflow: hidden;
+      transition: max-height 240ms ease, margin 240ms ease;
+    }
+    .faq__row.is-open .faq__a { max-height: 320px; margin: 12px 0 4px; }
+    .faq__row.is-open .faq__plus { transform: rotate(45deg); }
+
+    /* ── CTA band ──────────────────────────── */
+    .cta-band {
+      text-align: center; position: relative;
+      padding: 56px var(--m-pad); background: var(--cp-cream-200); color: var(--cp-maroon-900);
+    }
+    .cta-band__sparkle { display: flex; justify-content: center; margin-bottom: 16px; }
+    .cta-band__sparkle img { width: 38px; height: 38px; }
+    .cta-band__title {
+      font-family: var(--font-display); font-size: 26px; line-height: 1.2;
+      letter-spacing: -.008em; color: var(--cp-maroon-900); margin: 0 0 12px; text-wrap: balance;
+    }
+    .cta-band__sub {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 14px; line-height: 1.65; color: #3a2a29; margin: 0 0 24px;
+    }
+    .cta-band__row { display: flex; flex-direction: column; gap: 10px; }
+    .btn-call {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; background: transparent; color: var(--cp-maroon-900);
+      font-family: var(--font-body); font-weight: 700; font-size: 14.5px;
+      padding: 14px 18px; border-radius: 12px;
+      border: 1px solid rgba(67,7,6,.32); letter-spacing: .04em;
+      transition: background 160ms ease, color 160ms ease;
+    }
+    .btn-call:hover { background: rgba(67,7,6,.06); }
+    .btn-call iconify-icon { font-size: 18px; }
+
+    /* ── Footer ────────────────────────────── */
+    .footer {
+      background: var(--grad-maroon); color: var(--cp-cream-100);
+      padding: 48px var(--m-pad) 100px;
+    }
+    .footer__brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .footer__brand img { height: 30px; filter: brightness(0) invert(1); }
+    .footer__brand-name { font-family: var(--font-display); font-size: 18px; }
+    .footer__about {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 13px; line-height: 1.65; opacity: .82; margin: 0 0 28px;
+    }
+    .footer__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+    .footer__cols h4 {
+      font-family: var(--font-body); font-size: 11px; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,253,244,.6); margin: 0 0 12px;
+    }
+    .footer__cols ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .footer__cols a, .footer__cols li {
+      font-family: var(--font-body); font-weight: 500;
+      font-size: 13px; line-height: 1.5; color: rgba(255,253,244,.92);
+    }
+    .footer__legal {
+      margin-top: 32px; padding-top: 20px;
+      border-top: 1px solid rgba(255,253,244,.18);
+      font-family: var(--font-body); font-weight: 500; font-size: 11.5px;
+      line-height: 1.55; color: rgba(255,253,244,.65);
+      display: flex; flex-direction: column; gap: 6px;
+    }
+
+    /* ── Sticky WhatsApp + language toggle ─── */
+    .sticky-dock {
+      position: fixed; bottom: 18px; left: 50%;
+      transform: translateX(-50%);
+      width: calc(min(100%, 430px) - 32px);
+      max-width: 398px;
+      display: flex; align-items: stretch; gap: 10px;
+      z-index: 50;
+    }
+    .sticky-wa {
+      flex: 1; min-width: 0;
+      background: #1FAA59; color: #fff;
+      padding: 11px 14px; border-radius: 14px;
+      display: flex; align-items: center; gap: 10px;
+      box-shadow: 0 12px 30px rgba(31,170,89,.4), 0 4px 12px rgba(0,0,0,.18);
+      animation: sticky-pulse 5s ease-in-out infinite;
+    }
+    @keyframes sticky-pulse {
+      0%, 80%, 100% { transform: scale(1); }
+      88% { transform: scale(1.025); }
+      92% { transform: scale(0.985); }
+      96% { transform: scale(1.015); }
+    }
+    .sticky-wa__icon {
+      width: 32px; height: 32px; border-radius: 9px;
+      background: rgba(255,255,255,.15);
+      display: grid; place-items: center; flex-shrink: 0;
+    }
+    .sticky-wa__icon iconify-icon { font-size: 18px; }
+    .sticky-wa__lines { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+    .sticky-wa__en {
+      font-family: var(--font-body); font-weight: 700; font-size: 12.5px;
+      line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sticky-wa__fa {
+      font-family: var(--font-body); font-weight: 500; font-size: 11px;
+      line-height: 1.2; opacity: .85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sticky-lang {
+      flex-shrink: 0; width: 54px;
+      background: var(--cp-cream-100); color: var(--cp-maroon-900);
+      border-radius: 14px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1px; padding: 6px 0;
+      box-shadow: 0 12px 30px rgba(67,7,6,.22), 0 4px 12px rgba(0,0,0,.16);
+      border: 1px solid rgba(67,7,6,.10);
+      cursor: pointer; font-family: var(--font-body);
+      transition: transform 140ms ease;
+    }
+    .sticky-lang:active { transform: scale(0.96); }
+    .sticky-lang__glyph {
+      font-family: var(--font-display); font-size: 18px; line-height: 1;
+      font-weight: 700; letter-spacing: -.005em;
+    }
+    .sticky-lang__label { font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .65; }
+  </style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="device">
+
+    <!-- ── HERO ──────────────────────────────────── -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg">
+        <img src="assets/hero-mobile.png" alt="Afghan family — Caribbean Paradise" />
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <div class="nav__brand">
+          <img src="assets/logo.png" alt="Caribbean Paradise" />
+          <span class="nav__brand-name">Caribbean Paradise</span>
+        </div>
+        <button class="nav__menu" aria-label="Open menu" aria-expanded="false">
+          <iconify-icon icon="solar:hamburger-menu-linear"></iconify-icon>
+        </button>
+      </nav>
+
+      <p class="hero__eyebrow-strip" aria-hidden="true">Dominica Citizenship · For Afghan Families</p>
+
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Separate your family's future from the limitations of the <em>Afghan passport.</em>
+        </h1>
+        <p class="hero__lede">
+          A Dominica passport — through the country's official Citizenship by Investment Programme — gives Afghan families a quiet, legal route to global mobility and a more secure future.
+        </p>
+
+        <div class="hero__badge" role="note">
+          <p class="hero__badge-eyebrow">Special Programme</p>
+          <p class="hero__badge-title"><strong>Payment after</strong> receiving the passport</p>
+          <p class="hero__badge-fine">Available in special cases, subject to case review.</p>
+        </div>
+
+        <a href="https://wa.me/97428636620" class="btn-whatsapp" aria-label="Get expert consultation on WhatsApp">
+          <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
+          Get Expert Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- ── KEY FACTS ──────────────────────────────── -->
+    <section class="key-facts" aria-label="Key facts">
+      <div class="key-facts__stack">
+        <div class="key-fact-card">
+          <iconify-icon icon="solar:verified-check-linear"></iconify-icon>
+          <strong>Passport in 4 to 8 months</strong>
+        </div>
+        <div class="key-fact-card">
+          <iconify-icon icon="solar:global-linear"></iconify-icon>
+          <strong>Visa-free to 140+ countries</strong>
+        </div>
+        <div class="key-fact-card">
+          <iconify-icon icon="solar:wallet-money-linear"></iconify-icon>
+          <strong>Investment from USD 200,000</strong>
+        </div>
+        <div class="key-fact-card">
+          <iconify-icon icon="solar:home-linear"></iconify-icon>
+          <strong>No physical residency required</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHY US / TRUST ─────────────────────────── -->
+    <section class="section" id="why" aria-labelledby="why-heading">
+      <p class="eyebrow">Why Caribbean Paradise</p>
+      <h2 class="h2" id="why-heading">A more reliable application path for Afghan families</h2>
+      <p class="lede">Built on transparency, real documentation, and clear guidance — at every stage of the process.</p>
+
+      <div class="trust-grid" role="list" aria-label="Trust statistics">
+        <div class="trust-cell" role="listitem">
+          <p class="trust-cell__num">+1,500</p>
+          <p class="trust-cell__lab">Successful cases</p>
+        </div>
+        <div class="trust-cell" role="listitem">
+          <p class="trust-cell__num">+10</p>
+          <p class="trust-cell__lab">Years of experience</p>
+        </div>
+        <div class="trust-cell" role="listitem">
+          <p class="trust-cell__num">96%</p>
+          <p class="trust-cell__lab">Personalised case review</p>
+        </div>
+        <div class="trust-cell" role="listitem">
+          <p class="trust-cell__num">5</p>
+          <p class="trust-cell__lab">Caribbean programmes covered</p>
+        </div>
+      </div>
+
+      <div class="trust-extras">
+        <div class="trust-extra">
+          <div class="trust-extra__icon" aria-hidden="true"><iconify-icon icon="solar:document-add-linear"></iconify-icon></div>
+          <div>
+            <h4>Verified documents and licences</h4>
+            <p>Every application is built on real, certified documentation — verifiable through official channels.</p>
+          </div>
+        </div>
+        <div class="trust-extra">
+          <div class="trust-extra__icon" aria-hidden="true"><iconify-icon icon="solar:medal-star-linear"></iconify-icon></div>
+          <div>
+            <h4>Official representative of the Government of Dominica</h4>
+            <p>A direct, authorised channel to the country's Citizenship by Investment Unit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAYMENT OPTIONS ────────────────────────── -->
+    <section class="section section--tint" id="payment" aria-labelledby="payment-heading">
+      <p class="eyebrow">Secure Payment Options</p>
+      <h2 class="h2" id="payment-heading">Two structures, designed for your peace of mind</h2>
+      <p class="lede">Both options are documented, contractual and reviewed before signing.</p>
+
+      <p class="hscroll-hint" aria-hidden="true">
+        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        <span>Swipe to compare</span>
+      </p>
+
+      <div class="hscroll" role="list" aria-label="Payment options">
+        <div class="payment-card" role="listitem">
+          <span class="payment-card__chip">Option 1 — Special Cases</span>
+          <p class="payment-card__title"><strong>Payment after</strong> receiving the passport</p>
+          <p class="payment-card__desc">For qualifying applicants, the full programme fee may be paid only after the Dominica passport is officially issued.</p>
+          <p class="payment-card__desc payment-card__fine">Eligibility is determined during the free initial assessment.</p>
+        </div>
+        <div class="payment-card payment-card--feature" role="listitem">
+          <span class="payment-card__chip">Option 2 — Standard</span>
+          <p class="payment-card__title">Payment in <strong>3 stages</strong></p>
+          <p class="payment-card__desc">A staged structure aligned with each official milestone — payment follows progress, not promises.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TEAM + LICENCES ────────────────────────── -->
+    <section class="section" aria-labelledby="team-heading">
+      <p class="eyebrow">Inside Caribbean Paradise</p>
+      <h2 class="h2" id="team-heading">A team that handles your file in person</h2>
+      <p class="lede">Each application is assigned to named consultants — not a queue.</p>
+
+      <p class="hscroll-hint" aria-hidden="true">
+        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        <span>Swipe through official licences</span>
+      </p>
+
+      <div class="hscroll" role="list" aria-label="Official licences">
+        <div class="license-card" role="listitem">
+          <div class="license-card__img">
+            <img src="assets/license1.png" alt="Certificate of Authorisation — Citizenship by Investment Unit, Commonwealth of Dominica" />
+          </div>
+          <div class="license-card__caption">
+            <strong>Official Authorisation Certificate</strong>
+            <span>Citizenship by Investment Unit — Commonwealth of Dominica</span>
+          </div>
+        </div>
+        <div class="license-card" role="listitem">
+          <div class="license-card__img">
+            <img src="assets/license2.webp" alt="Marketing Agent Licence — São Tomé and Príncipe" />
+          </div>
+          <div class="license-card__caption">
+            <strong>Marketing Agent Licence</strong>
+            <span>São Tomé and Príncipe Citizenship Programme</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-roles" role="list" aria-label="Team roles">
+        <div class="team-role" role="listitem">
+          <span class="team-role__dot" aria-hidden="true"></span>
+          <div><p class="team-role__name">Senior CBI Consultants</p><p class="team-role__title">Case strategy &amp; eligibility review</p></div>
+        </div>
+        <div class="team-role" role="listitem">
+          <span class="team-role__dot" aria-hidden="true"></span>
+          <div><p class="team-role__name">Document Specialists</p><p class="team-role__title">Translation, certification, apostille</p></div>
+        </div>
+        <div class="team-role" role="listitem">
+          <span class="team-role__dot" aria-hidden="true"></span>
+          <div><p class="team-role__name">Government Liaison</p><p class="team-role__title">Direct channel to the Dominica CBIU</p></div>
+        </div>
+        <div class="team-role" role="listitem">
+          <span class="team-role__dot" aria-hidden="true"></span>
+          <div><p class="team-role__name">Family Affairs Officer</p><p class="team-role__title">Spouse &amp; dependant inclusion</p></div>
+        </div>
+        <div class="team-role" role="listitem">
+          <span class="team-role__dot" aria-hidden="true"></span>
+          <div><p class="team-role__name">Compliance &amp; Due Diligence</p><p class="team-role__title">Source-of-funds and background</p></div>
+        </div>
+        <div class="team-role" role="listitem">
+          <span class="team-role__dot" aria-hidden="true"></span>
+          <div><p class="team-role__name">Persian-speaking Advisors</p><p class="team-role__title">Dedicated to Afghan applicants</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROCESS ────────────────────────────────── -->
+    <section class="section section--tint" id="process" aria-labelledby="process-heading">
+      <p class="eyebrow">The Process</p>
+      <h2 class="h2" id="process-heading">Seven defined stages — from first call to passport in hand</h2>
+      <p class="lede">You always know which step you're on, and what is being prepared on your behalf.</p>
+
+      <ol class="process" aria-label="Application steps">
+        <li class="process-step process-step--active">
+          <div class="process-node" aria-hidden="true">01</div>
+          <div><p class="process-step__label">Free initial assessment</p><p class="process-step__detail">Eligibility &amp; route consultation</p></div>
+        </li>
+        <li class="process-step">
+          <div class="process-node" aria-hidden="true">02</div>
+          <div><p class="process-step__label">File opening</p><p class="process-step__detail">Engagement &amp; KYC</p></div>
+        </li>
+        <li class="process-step">
+          <div class="process-node" aria-hidden="true">03</div>
+          <div><p class="process-step__label">Document preparation</p><p class="process-step__detail">Translation, apostille, certification</p></div>
+        </li>
+        <li class="process-step">
+          <div class="process-node" aria-hidden="true">04</div>
+          <div><p class="process-step__label">Document submission</p><p class="process-step__detail">Filed with Dominica CBIU</p></div>
+        </li>
+        <li class="process-step">
+          <div class="process-node" aria-hidden="true">05</div>
+          <div><p class="process-step__label">Government review</p><p class="process-step__detail">Due diligence &amp; vetting</p></div>
+        </li>
+        <li class="process-step">
+          <div class="process-node" aria-hidden="true">06</div>
+          <div><p class="process-step__label">Document approval</p><p class="process-step__detail">Approval-in-principle issued</p></div>
+        </li>
+        <li class="process-step">
+          <div class="process-node" aria-hidden="true">07</div>
+          <div><p class="process-step__label">Passport issuance</p><p class="process-step__detail">Official Dominica passport</p></div>
+        </li>
+      </ol>
+
+      <div class="process-meta">
+        <div class="process-meta__item"><iconify-icon icon="solar:clock-circle-linear"></iconify-icon><span>4–8 month timeline</span></div>
+        <div class="process-meta__item"><iconify-icon icon="solar:home-linear"></iconify-icon><span>No residency required</span></div>
+        <div class="process-meta__item"><iconify-icon icon="solar:users-group-rounded-linear"></iconify-icon><span>Spouse &amp; children included</span></div>
+        <div class="process-meta__item"><iconify-icon icon="solar:shield-check-linear"></iconify-icon><span>Government-supervised</span></div>
+      </div>
+    </section>
+
+    <!-- ── WHY DOMINICA ───────────────────────────── -->
+    <section class="section" id="benefits" aria-labelledby="benefits-heading">
+      <div class="benefits-image">
+        <img src="assets/afghan-family-upload.png" alt="Afghan family — a new future with Dominica citizenship" />
+        <div class="benefits-image__caption">
+          <strong>Dominica</strong>
+          <span>Official Citizenship by Investment Programme</span>
+        </div>
+      </div>
+
+      <p class="eyebrow">Why Dominica</p>
+      <h2 class="h2" id="benefits-heading">Why so many Afghan families choose Dominica</h2>
+
+      <ul class="benefits-list">
+        <li><iconify-icon icon="solar:check-circle-linear"></iconify-icon><span>Better opportunities for your children's future and education</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear"></iconify-icon><span>Greater freedom for travel and business expansion</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear"></iconify-icon><span>Increased security and reduced life risks for your family</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear"></iconify-icon><span>Apply with spouse and children in a single application</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear"></iconify-icon><span>In some cases, possibility of adding other family members</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear"></iconify-icon><span>Official, legal programme of the Government of Dominica</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear"></iconify-icon><span>No physical residency required</span></li>
+      </ul>
+    </section>
+
+    <!-- ── CONSEQUENCES ───────────────────────────── -->
+    <section class="section section--cream" aria-labelledby="consequences-heading">
+      <p class="eyebrow">The cost of standing still</p>
+      <h2 class="h2" id="consequences-heading">What passport limitations actually mean</h2>
+
+      <p class="hscroll-hint" aria-hidden="true">
+        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        <span>Swipe to see each impact</span>
+      </p>
+
+      <div class="hscroll" role="list" aria-label="Passport limitation consequences">
+        <div class="consequence-card" role="listitem">
+          <div class="consequence-card__icon" aria-hidden="true"><iconify-icon icon="solar:case-round-minimalistic-linear"></iconify-icon></div>
+          <p class="consequence-card__title">Business becomes limited</p>
+          <p class="consequence-card__desc">Restricted travel makes meetings, contracts and international banking harder to maintain.</p>
+        </div>
+        <div class="consequence-card" role="listitem">
+          <div class="consequence-card__icon" aria-hidden="true"><iconify-icon icon="solar:square-academic-cap-linear"></iconify-icon></div>
+          <p class="consequence-card__title">Educational opportunities may be lost</p>
+          <p class="consequence-card__desc">Visa hurdles can close doors to schools, universities and exchange programmes for your children.</p>
+        </div>
+        <div class="consequence-card" role="listitem">
+          <div class="consequence-card__icon" aria-hidden="true"><iconify-icon icon="solar:question-circle-linear"></iconify-icon></div>
+          <p class="consequence-card__title">The future remains uncertain</p>
+          <p class="consequence-card__desc">Without freedom of movement, long-term family planning becomes difficult to commit to.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── OFFICES ────────────────────────────────── -->
+    <section class="section section--tint" id="offices" aria-labelledby="offices-heading">
+      <p class="eyebrow">In-Person Office Visits</p>
+      <h2 class="h2" id="offices-heading">Visit a Caribbean Paradise office in Afghanistan</h2>
+      <p class="lede">Walk in, sit with a consultant, and have your case reviewed face-to-face.</p>
+
+      <!-- Card-stack carousel: 2 video covers + 1 office photo -->
+      <div class="stack-stage" id="stackStage" aria-label="Office media gallery">
+        <article class="stack-card stack-card--video" data-pos="0" role="button" tabindex="0" aria-label="Watch consultant intro video">
+          <div class="stack-card__media">
+            <img src="assets/team-video-cover.webp" alt="Caribbean Paradise consultant — video intro" />
+            <span class="stack-card__play" aria-hidden="true"><iconify-icon icon="solar:play-bold"></iconify-icon></span>
+            <span class="stack-card__duration"><iconify-icon icon="solar:videocamera-record-linear"></iconify-icon>0:48</span>
+          </div>
+          <div class="stack-card__caption">
+            <p class="stack-card__eyebrow">Meet the team</p>
+            <p class="stack-card__title">Ahmad Yusufzai</p>
+            <p class="stack-card__sub">Senior CBI Consultant</p>
+          </div>
+        </article>
+
+        <article class="stack-card stack-card--video" data-pos="1" role="button" tabindex="0" aria-label="Watch team meeting video">
+          <div class="stack-card__media">
+            <img src="assets/team-meeting-cover.webp" alt="Caribbean Paradise team in a strategy meeting" />
+            <span class="stack-card__play" aria-hidden="true"><iconify-icon icon="solar:play-bold"></iconify-icon></span>
+            <span class="stack-card__duration"><iconify-icon icon="solar:videocamera-record-linear"></iconify-icon>1:12</span>
+          </div>
+          <div class="stack-card__caption">
+            <p class="stack-card__eyebrow">Inside our team</p>
+            <p class="stack-card__title">A weekly case review</p>
+            <p class="stack-card__sub">How we work on every file</p>
+          </div>
+        </article>
+
+        <article class="stack-card" data-pos="2">
+          <div class="stack-card__media">
+            <img src="assets/office-interior.jpeg" alt="Caribbean Paradise office interior" />
+          </div>
+          <div class="stack-card__caption">
+            <p class="stack-card__eyebrow">Our space</p>
+            <p class="stack-card__title">Inside the office</p>
+            <p class="stack-card__sub"><iconify-icon icon="solar:map-point-linear"></iconify-icon>Dubai HQ · Burj Gate</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="stack-dots" id="stackDots" role="tablist" aria-label="Gallery position">
+        <span class="stack-dot is-active" role="tab" aria-selected="true" aria-label="Slide 1"></span>
+        <span class="stack-dot" role="tab" aria-selected="false" aria-label="Slide 2"></span>
+        <span class="stack-dot" role="tab" aria-selected="false" aria-label="Slide 3"></span>
+      </div>
+
+      <div class="office-list" role="list" aria-label="Office locations">
+        <div class="office-card" role="listitem">
+          <div class="office-pin" aria-hidden="true"><iconify-icon icon="solar:map-point-linear"></iconify-icon></div>
+          <div class="office-card__body">
+            <p class="office-card__city">Kabul — Main Branch</p>
+            <p class="office-card__addr">Shahr-e Naw, near Park, 4th floor</p>
+            <a href="tel:+93202100100" class="office-card__phone"><iconify-icon icon="solar:phone-linear"></iconify-icon>+93 20 210 0100</a>
+          </div>
+        </div>
+        <div class="office-card" role="listitem">
+          <div class="office-pin" aria-hidden="true"><iconify-icon icon="solar:map-point-linear"></iconify-icon></div>
+          <div class="office-card__body">
+            <p class="office-card__city">Herat</p>
+            <p class="office-card__addr">Walayat Street, Business Center, 2nd floor</p>
+            <a href="tel:+93402200200" class="office-card__phone"><iconify-icon icon="solar:phone-linear"></iconify-icon>+93 40 220 0200</a>
+          </div>
+        </div>
+        <div class="office-card" role="listitem">
+          <div class="office-pin" aria-hidden="true"><iconify-icon icon="solar:map-point-linear"></iconify-icon></div>
+          <div class="office-card__body">
+            <p class="office-card__city">Mazar-i-Sharif</p>
+            <p class="office-card__addr">Central Square, Commerce Tower, 3rd floor</p>
+            <a href="tel:+93502300300" class="office-card__phone"><iconify-icon icon="solar:phone-linear"></iconify-icon>+93 50 230 0300</a>
+          </div>
+        </div>
+        <div class="office-card" role="listitem">
+          <div class="office-pin" aria-hidden="true"><iconify-icon icon="solar:map-point-linear"></iconify-icon></div>
+          <div class="office-card__body">
+            <p class="office-card__city">Dubai HQ</p>
+            <p class="office-card__addr">Office 105, 48 Burj Gate, Burj Khalifa Area</p>
+            <a href="tel:+97428636620" class="office-card__phone"><iconify-icon icon="solar:phone-linear"></iconify-icon>+974 286 3662</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ────────────────────────────────────── -->
+    <section class="section" id="faq" aria-labelledby="faq-heading">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2" id="faq-heading">Common questions from Afghan applicants</h2>
+
+      <div class="faq" id="faqList">
+        <div class="faq__row">
+          <div class="faq__head">
+            <p class="faq__q">Is this programme legal?</p>
+            <iconify-icon class="faq__plus" icon="solar:add-circle-outline" aria-hidden="true"></iconify-icon>
+          </div>
+          <p class="faq__a">Yes. The Dominica passport is offered through the country's official Citizenship by Investment Programme, established by an act of parliament.</p>
+        </div>
+        <div class="faq__row">
+          <div class="faq__head">
+            <p class="faq__q">Is physical presence in Dominica required?</p>
+            <iconify-icon class="faq__plus" icon="solar:add-circle-outline" aria-hidden="true"></iconify-icon>
+          </div>
+          <p class="faq__a">No. There is no residency requirement before, during, or after the application. The entire process can be completed without travelling to Dominica.</p>
+        </div>
+        <div class="faq__row">
+          <div class="faq__head">
+            <p class="faq__q">What if my application is rejected?</p>
+            <iconify-icon class="faq__plus" icon="solar:add-circle-outline" aria-hidden="true"></iconify-icon>
+          </div>
+          <p class="faq__a">During the free initial assessment we identify any factors that could lead to rejection — before any payment is made. In rare rejection cases, we walk you through the official appeals process.</p>
+        </div>
+        <div class="faq__row">
+          <div class="faq__head">
+            <p class="faq__q">How does the payment process work?</p>
+            <iconify-icon class="faq__plus" icon="solar:add-circle-outline" aria-hidden="true"></iconify-icon>
+          </div>
+          <p class="faq__a">Two options: payment after receiving the passport (in special cases) or payment in three stages aligned with each official milestone. Both are documented in your engagement agreement.</p>
+        </div>
+        <div class="faq__row">
+          <div class="faq__head">
+            <p class="faq__q">Can I apply with my family?</p>
+            <iconify-icon class="faq__plus" icon="solar:add-circle-outline" aria-hidden="true"></iconify-icon>
+          </div>
+          <p class="faq__a">Yes. The main applicant can include spouse and children in the same application. In some cases, additional family members can also be added.</p>
+        </div>
+        <div class="faq__row">
+          <div class="faq__head">
+            <p class="faq__q">How long does it take?</p>
+            <iconify-icon class="faq__plus" icon="solar:add-circle-outline" aria-hidden="true"></iconify-icon>
+          </div>
+          <p class="faq__a">For most Afghan applicants, the timeline is 4 to 8 months from file opening to passport issuance, subject to government review timelines.</p>
+        </div>
+        <div class="faq__row">
+          <div class="faq__head">
+            <p class="faq__q">How can I get started?</p>
+            <iconify-icon class="faq__plus" icon="solar:add-circle-outline" aria-hidden="true"></iconify-icon>
+          </div>
+          <p class="faq__a">Begin with a free, no-obligation case assessment — by WhatsApp, by phone, or in person at one of our offices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BAND ────────────────────────────────── -->
+    <section class="cta-band" id="cta" aria-labelledby="cta-heading">
+      <div class="cta-band__sparkle" aria-hidden="true"><img src="assets/wreath-laurel.svg" alt="" /></div>
+      <h2 class="cta-band__title" id="cta-heading">Begin with a free, confidential case assessment.</h2>
+      <p class="cta-band__sub">Talk directly to a senior consultant — in Persian or English — and find out, in one call, whether the Dominica programme is the right path for your family.</p>
+      <div class="cta-band__row">
+        <a href="https://wa.me/97428636620" class="btn-whatsapp" aria-label="Start free consultation on WhatsApp">
+          <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
+          Free Consultation on WhatsApp
+        </a>
+        <a href="tel:+97428636620" class="btn-call" aria-label="Call +974 286 3662">
+          <iconify-icon icon="solar:phone-calling-linear"></iconify-icon>
+          +974 286 3662
+        </a>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/logo.png" alt="Caribbean Paradise" />
+        <span class="footer__brand-name">Caribbean Paradise</span>
+      </div>
+      <p class="footer__about">A Dubai-based citizenship advisory firm specialising in Caribbean Citizenship by Investment programmes. Official representative of the Government of Dominica.</p>
+
+      <div class="footer__cols">
+        <div>
+          <h4>Programme</h4>
+          <ul>
+            <li><a href="#benefits">Why Dominica</a></li>
+            <li><a href="#process">Application Process</a></li>
+            <li><a href="#payment">Payment Options</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Offices</h4>
+          <ul>
+            <li><a href="#offices">Kabul</a></li>
+            <li><a href="#offices">Herat</a></li>
+            <li><a href="#offices">Mazar-i-Sharif</a></li>
+            <li><a href="#offices">Dubai HQ</a></li>
+          </ul>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <h4>Contact</h4>
+          <ul>
+            <li>+974 286 3662</li>
+            <li>info@caribbeanparadise.ae</li>
+            <li>Office 105, Burj Gate, Dubai</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <span>© 2026 Caribbean Paradise. All rights reserved.</span>
+        <span>Authorised marketing agent — Government of the Commonwealth of Dominica.</span>
+      </div>
+    </footer>
+
+  </div><!-- /.device -->
+</div><!-- /.stage -->
+
+<!-- ── STICKY WHATSAPP + LANGUAGE TOGGLE ──────────── -->
+<div class="sticky-dock" role="region" aria-label="Quick contact">
+  <a href="https://wa.me/97428636620" class="sticky-wa" aria-label="Free consultation on WhatsApp">
+    <span class="sticky-wa__icon" aria-hidden="true"><iconify-icon icon="ic:baseline-whatsapp"></iconify-icon></span>
+    <span class="sticky-wa__lines">
+      <span class="sticky-wa__en" id="waPrimary">Free Consultation on WhatsApp</span>
+      <span class="sticky-wa__fa" id="waSecondary" dir="rtl">مشاوره رایگان در واتس‌اپ</span>
+    </span>
+  </a>
+  <button class="sticky-lang" id="langToggle" type="button" aria-label="Switch language between Farsi and Pashto">
+    <span class="sticky-lang__glyph" id="langGlyph">پښ</span>
+    <span class="sticky-lang__label" id="langLabel">PS</span>
+  </button>
+</div>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('#faqList .faq__row').forEach(function(row) {
+    row.addEventListener('click', function() {
+      var isOpen = row.classList.toggle('is-open');
+      row.querySelector('.faq__head').setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
+  // Card-stack carousel — cycle front card every 3 seconds
+  (function() {
+    var stage = document.getElementById('stackStage');
+    var dotsWrap = document.getElementById('stackDots');
+    if (!stage) return;
+    var cards = Array.from(stage.querySelectorAll('.stack-card'));
+    var dots = Array.from(dotsWrap.querySelectorAll('.stack-dot'));
+    var N = cards.length;
+    var front = 0;
+    var timer = null;
+
+    function render() {
+      cards.forEach(function(card, i) {
+        var pos = (i - front + N) % N;
+        card.setAttribute('data-pos', String(pos));
+      });
+      dots.forEach(function(d, i) {
+        var active = i === front;
+        d.classList.toggle('is-active', active);
+        d.setAttribute('aria-selected', String(active));
+      });
+    }
+
+    function advance() { front = (front + 1) % N; render(); }
+    function start() { stop(); timer = setInterval(advance, 3000); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    cards.forEach(function(card, i) {
+      card.addEventListener('click', function() {
+        if (i === front) return;
+        front = i; render(); start();
+      });
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (i !== front) { front = i; render(); start(); }
+        }
+      });
+    });
+
+    stage.addEventListener('mouseenter', stop);
+    stage.addEventListener('mouseleave', start);
+
+    render();
+    start();
+  })();
+
+  // Language toggle (Farsi / Pashto) — toggles the secondary line of the sticky CTA
+  (function() {
+    var states = {
+      fa: { glyph: 'پښ', label: 'PS', secondary: 'مشاوره رایگان در واتس‌اپ' },
+      ps: { glyph: 'فا', label: 'FA', secondary: 'په واټساپ کې وړیا سلا مشوره' }
+    };
+    var current = 'fa';
+    var btn = document.getElementById('langToggle');
+    var glyph = document.getElementById('langGlyph');
+    var label = document.getElementById('langLabel');
+    var secondary = document.getElementById('waSecondary');
+
+    btn.addEventListener('click', function() {
+      current = current === 'fa' ? 'ps' : 'fa';
+      var s = states[current];
+      glyph.textContent = s.glyph;
+      label.textContent = s.label;
+      secondary.textContent = s.secondary;
+      btn.setAttribute('aria-label', 'Switch language to ' + (current === 'fa' ? 'Pashto' : 'Farsi'));
+    });
+  })();
+</script>
+
+</body>
+</html>

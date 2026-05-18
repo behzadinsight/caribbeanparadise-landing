@@ -1,0 +1,198 @@
+/* Caribbean Paradise — Colors & Typography
+   Use these CSS variables in any product surface.
+   ─────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* ── Brand reds (deep maroon → ruby) ─────────────── */
+  --cp-maroon-900: rgb(67, 7, 6);     /* primary brand red — headings on cream, button gradients */
+  --cp-maroon-800: rgb(101, 19, 17);  /* gradient stop, hover */
+  --cp-maroon-700: rgb(141, 12, 10);  /* secondary brand red */
+  --cp-maroon-600: rgb(141, 8, 6);    /* warm accent */
+  --cp-rose-300:   rgb(192, 172, 172);/* muted rose tint (icon-tile bg) */
+  --cp-rose-200:   rgb(161, 131, 131);/* divider rose */
+
+  /* ── Cream / paper neutrals ──────────────────────── */
+  --cp-cream-50:  rgb(255, 254, 248); /* card fill on tint surfaces */
+  --cp-cream-100: rgb(255, 253, 244); /* canvas background */
+  --cp-cream-200: rgb(242, 238, 225); /* warm soft fill */
+  --cp-cream-300: rgb(235, 227, 220); /* contact-strip fill */
+  --cp-stone-200: rgb(213, 211, 203); /* tinted bands (used at 20% alpha) */
+  --cp-stone-400: rgb(170, 169, 163); /* secondary text on cream */
+
+  /* ── Inks ────────────────────────────────────────── */
+  --cp-ink-900:    rgb(33, 33, 33);   /* primary body text */
+  --cp-ink-700:    rgb(40, 40, 40);   /* stroke / divider */
+  --cp-ink-600:    rgb(102, 102, 102);/* meta text */
+  --cp-white:      rgb(255, 255, 255);
+  --cp-black:      rgb(0, 0, 0);
+
+  /* ── Surfaces & borders (semantic) ───────────────── */
+  --bg-canvas:     var(--cp-cream-100);
+  --bg-tint:       rgba(213, 211, 203, 0.20);   /* alternating section band */
+  --bg-card:       var(--cp-cream-50);
+  --bg-card-warm:  var(--cp-cream-300);
+  --fg-1:          var(--cp-ink-900);            /* primary text */
+  --fg-2:          var(--cp-ink-600);            /* secondary text */
+  --fg-brand:      var(--cp-maroon-900);
+  --fg-on-brand:   var(--cp-cream-100);          /* text on maroon */
+  --border-rose:   var(--cp-rose-200);           /* hairline divider */
+  --border-soft:   rgba(102, 102, 102, 0.20);
+  --border-subtle: rgba(102, 102, 102, 0.40);
+
+  /* ── Brand gradients ─────────────────────────────── */
+  --grad-maroon:        linear-gradient(180deg, rgb(67,7,6) 0%, rgb(141,12,10) 100%);
+  --grad-maroon-button: linear-gradient(180deg, rgb(67,7,6) 0%, rgb(101,19,17) 100%);
+  --grad-maroon-glass:  linear-gradient(180deg, rgba(67,7,6,0.8) 0%, rgba(141,8,6,0.8) 100%);
+  --grad-hero-veil:     linear-gradient(180deg, rgba(33,33,33,0.5) 0%, rgba(101,19,17,0) 100%);
+  --grad-image-tint:    linear-gradient(180deg, rgba(67,7,6,0.5) 0%, rgba(141,12,10,0.5) 100%);
+
+  /* ── Radii (the system uses three) ───────────────── */
+  --radius-sm: 6px;     /* buttons, FAQ rows */
+  --radius-md: 10px;    /* cards, image frames, panels */
+  --radius-lg: 20px;    /* hero glass panel */
+  --radius-pill: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────── */
+  --shadow-card: 0 4px 24px rgba(67, 7, 6, 0.08);
+  --shadow-pop:  0 12px 40px rgba(67, 7, 6, 0.18);
+  --blur-glass:  blur(10px);
+
+  /* ── Spacing scale (8px base, with brand 24/42/68) ─ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 28px;
+  --space-7: 40px;
+  --space-8: 42px;   /* section gap */
+  --space-9: 68px;   /* tinted-section vertical rhythm */
+  --space-10: 80px;  /* page padding y */
+  --space-11: 90px;
+
+  /* ── Layout ──────────────────────────────────────── */
+  --page-max:    1284px;   /* content max-width */
+  --page-pad-x:  80px;     /* desktop side padding */
+
+  /* ── Type families ───────────────────────────────── */
+  --font-display: "Times New Roman", "Tinos", "Liberation Serif", Georgia, serif;
+  --font-body:    "Quicksand", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+
+  /* ── Type tokens (size / line-height / weight / tracking) ── */
+  /* Display headings — Times New Roman */
+  --type-display-xl-size:  60px; /* hero stat numbers */
+  --type-display-xl-lh:    1.4;
+  --type-display-xl-weight: 400;
+
+  --type-display-lg-size:  48px; /* hero h1 — bold */
+  --type-display-lg-lh:    1;
+  --type-display-lg-weight: 700;
+  --type-display-lg-track: -0.012em;
+
+  --type-display-md-size:  38px; /* section h2 — regular */
+  --type-display-md-lh:    1.25;
+  --type-display-md-weight: 400;
+  --type-display-md-track: -0.007em;
+
+  --type-display-sm-size:  24px; /* card / process step h3 */
+  --type-display-sm-lh:    1.25;
+  --type-display-sm-weight: 400;
+  --type-display-sm-track: -0.007em;
+
+  /* Body — Quicksand */
+  --type-h4-size:   24px; /* process step bold */
+  --type-h4-lh:     32px;
+  --type-h4-weight: 700;
+  --type-h4-track:  -0.006em;
+
+  --type-eyebrow-size:   20px; /* card titles / stat labels */
+  --type-eyebrow-lh:     28px;
+  --type-eyebrow-weight: 700;
+  --type-eyebrow-track:  -0.005em;
+
+  --type-body-size:   16px; /* default paragraph */
+  --type-body-lh:     28px; /* 1.75 */
+  --type-body-weight: 500;
+
+  --type-lede-size:   16px; /* hero subhead, looser leading */
+  --type-lede-lh:     1.85;
+  --type-lede-weight: 500;
+
+  --type-nav-size:   18px; /* nav links, phone number, button label */
+  --type-nav-lh:     1.85;
+  --type-nav-weight: 500;
+
+  --type-button-size: 18px;
+  --type-button-lh:   28px;
+  --type-button-weight: 700;
+
+  --type-meta-size:   14px; /* badge/meta text */
+  --type-meta-lh:     14px;
+  --type-meta-weight: 700;
+
+  --type-mini-size:   12px;
+  --type-mini-lh:     16px;
+  --type-mini-weight: 300;
+}
+
+/* ────────────────────────────────────────────
+   SEMANTIC ELEMENT DEFAULTS
+   Drop colors_and_type.css into a page and
+   text/background tokens are wired up.
+   ──────────────────────────────────────────── */
+
+html, body {
+  background: var(--bg-canvas);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-lh);
+  font-weight: var(--type-body-weight);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--fg-brand);
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--type-display-lg-size);
+  line-height: var(--type-display-lg-lh);
+  font-weight: var(--type-display-lg-weight);
+  letter-spacing: var(--type-display-lg-track);
+}
+h2 {
+  font-size: var(--type-display-md-size);
+  line-height: var(--type-display-md-lh);
+  font-weight: var(--type-display-md-weight);
+  letter-spacing: var(--type-display-md-track);
+}
+h3 {
+  font-size: var(--type-display-sm-size);
+  line-height: var(--type-display-sm-lh);
+  font-weight: var(--type-display-sm-weight);
+  letter-spacing: var(--type-display-sm-track);
+}
+h4 {
+  font-family: var(--font-body);
+  font-size: var(--type-h4-size);
+  line-height: var(--type-h4-lh);
+  font-weight: var(--type-h4-weight);
+  letter-spacing: var(--type-h4-track);
+  color: var(--fg-1);
+}
+
+p { margin: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 160ms ease;
+}
+a:hover { opacity: 0.7; }
+
+::selection { background: var(--cp-maroon-900); color: var(--cp-cream-100); }
